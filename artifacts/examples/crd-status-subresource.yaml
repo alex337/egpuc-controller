@@ -13,15 +13,18 @@ spec:
       served: true
       storage: true
       additionalPrinterColumns:
-        - name: Pod
+        - name: PodName
           type: string
           jsonPath: .spec.podName
+        - name: ContainerName
+          type: string
+          jsonPath: .spec.container.containerName
         - name: QGPUMemory
           type: string
-          jsonPath: .spec.resources.requests.QGPUMemory
+          jsonPath: .spec.container.resources.requests.QGPUMemory
         - name: QGPUCore
           type: string
-          jsonPath: .spec.resources.requests.QGPUCore
+          jsonPath: .spec.container.resources.requests.QGPUCore
         - name: Age
           type: date
           jsonPath: .metadata.creationTimestamp
@@ -37,16 +40,23 @@ spec:
                   type: string
                 nameSpace:
                   type: string
-                resources:
+                container:
                   type: object
                   properties:
-                    requests:
+                    containerName:
+                      type: string
+                    resources:
                       type: object
                       properties:
-                        QGPUMemory:
-                          type: string
-                        QGPUCore:
-                          type: string
+                        requests:
+                          type: object
+                          properties:
+                            QGPUMemory:
+                              type: string
+                            QGPUCore:
+                              type: string
+
+
             status:
               type: object
               properties:

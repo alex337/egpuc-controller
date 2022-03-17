@@ -19,9 +19,9 @@ limitations under the License.
 package versioned
 
 import (
-	egpuccontrollerv1alpha1 "github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned/typed/egpuccontroller/v1alpha1"
 	"fmt"
 
+	egpuccontrollerv1alpha1 "github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned/typed/egpuccontroller/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

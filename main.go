@@ -109,10 +109,13 @@ func newEGPUC(name string, replicas *int32) *egpucController.EGPUC {
 		Spec: egpucController.EGPUCSpec{
 			PodName: fmt.Sprintf("%s-deployment", name),
 			NameSpace: "default",
-			Resources: egpucController.EGPUCResource{
-				Requests: egpucController.EGPUCRequest{
-					QGPUMemory: "1",
-					QGPUCore: "1",
+			Container: egpucController.Container{
+				ContainerName: "cont1",
+				Resource: egpucController.EGPUCResource{
+					Requests: egpucController.EGPUCRequest{
+						QGPUMemory: "1",
+						QGPUCore: "1",
+					},
 				},
 			},
 		},

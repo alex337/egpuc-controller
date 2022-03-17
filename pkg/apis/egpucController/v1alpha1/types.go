@@ -36,7 +36,12 @@ type EGPUC struct {
 type EGPUCSpec struct {
 	PodName string `json:"podName"`
 	NameSpace string `json:"nameSpace"`
-	Resources EGPUCResource `json:"resources"`
+	Container Container `json:"container"`
+}
+
+type Container struct {
+	ContainerName string `json:"containerName"`
+	Resource EGPUCResource `json:"resources"`
 }
 
 type EGPUCResource struct {

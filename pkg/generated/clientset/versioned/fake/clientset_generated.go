@@ -22,7 +22,6 @@ import (
 	clientset "github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned"
 	egpuccontrollerv1alpha1 "github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned/typed/egpuccontroller/v1alpha1"
 	fakeegpuccontrollerv1alpha1 "github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned/typed/egpuccontroller/v1alpha1/fake"
-
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

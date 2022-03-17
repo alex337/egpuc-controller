@@ -21,7 +21,6 @@ package v1alpha1
 import (
 	v1alpha1 "github.com/alex337/egpuc-controller/pkg/apis/egpucController/v1alpha1"
 	"github.com/alex337/egpuc-controller/pkg/generated/clientset/versioned/scheme"
-
 	rest "k8s.io/client-go/rest"
 )
 
